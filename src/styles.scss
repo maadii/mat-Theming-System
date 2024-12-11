@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "./styles/themes/light.scss" as light;
+@use "./styles/themes/dark.scss" as dark;
+
+@include mat.core();
+@include mat.all-component-themes(light.$light-theme);
