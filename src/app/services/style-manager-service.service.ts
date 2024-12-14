@@ -9,10 +9,12 @@ export class StyleManagerServiceService {
 
   toggleTheme() {
     if (this.isDark) {
-      document.body.classList.remove(this.darkThemeClass);
-    } else {
-      document.body.classList.add(this.darkThemeClass);
-    }
+      document.body.classList.add('dark-theme');
+      document.body.classList.remove('light-theme');
+  } else {
+      document.body.classList.add('light-theme');
+      document.body.classList.remove('dark-theme');
+  } 
     this.isDark = !this.isDark;
   }
   constructor() { }
